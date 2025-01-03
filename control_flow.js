@@ -48,3 +48,23 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true;
 let authenticationStatus=isAuthenticated ? "Authenticated":"Not Authenticated";
 console.log("Authentication Status:", authenticationStatus);
+
+let user="Enrolled Member";
+let Service;
+switch (user) {
+    case "Employee":
+        Service="You have access to Dietary Services.";
+        break;
+    case "Enrolled Member":
+        Service="You have access to Dietary Services and one-on-one interaction with a dietician.";
+        break;
+    case "Subscriber":
+        Service="You have partial access to facilitate Dietary Services.";
+        break;
+    case "Non Subscriber":
+        Service="You need to enroll or subscribe first to avail this facility.";
+    default:
+        Service="Invalid role. Please check your credentials.";
+        break;
+}
+console.log("Message:", Service);
